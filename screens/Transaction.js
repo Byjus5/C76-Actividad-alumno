@@ -18,8 +18,8 @@ export default class TransactionScreen extends Component {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
 
     this.setState({
-      /*status === "granted" is true when user has granted permission
-          status === "granted" is false when user has not granted the permission
+      /*status === "granted" es true cuando el usuario ha dado permiso
+          status === "granted" es false cuando el usuario no ha dado permiso
         */
       hasCameraPermissions: status === "granted",
       domState: domState,
@@ -37,7 +37,7 @@ export default class TransactionScreen extends Component {
           style={[styles.button, { marginTop: 25 }]}
           onPress={() => this.getCameraPermissions("scanner")}
         >
-          <Text style={styles.buttonText}>Scan QR Code</Text>
+          <Text style={styles.buttonText}>Escanear código QR</Text>
         </TouchableOpacity>
       </View>
     );
